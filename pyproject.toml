@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "breed-detection"
+version = "0.1.0"
+description = ""
+authors = ["Binh Le <lebinh190998@gmail.com>"]
+readme = "README.md"
+packages = [{include = "breed_detection"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = "^0.100.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.4.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
