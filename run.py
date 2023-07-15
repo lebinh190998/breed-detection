@@ -13,6 +13,11 @@ from breed_detection.asgi import app
 
 CURRENT_DIR = os.path.dirname(os.path.realpath(__file__))
 
+def label_breed(x): 
+    filename = x.split('/')[-1]
+    label = ' '.join(word.capitalize() for word in filename.split('_')[:-1])
+    return label
+
 if __name__ == "__main__":
     if sys.argv[-1] == "openapi":
         schema = app.openapi()
