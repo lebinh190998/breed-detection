@@ -6,12 +6,33 @@ authors = ["Binh Le <lebinh190998@gmail.com>"]
 readme = "README.md"
 packages = [{include = "breed_detection"}]
 
+[[tool.poetry.source]]
+name = "torch_cpu"
+url = "https://download.pytorch.org/whl/cpu"
+priority = "supplemental"
+
+[[tool.poetry.source]]
+name = "PyPI"
+priority = "primary"
+
+[tool.poetry.group.torch_cpu]
+optional = true
+
+[tool.poetry.group.torch_cpu.dependencies]
+torch = { version = ">=1.6.0", source="torch_cpu"}
+
+[tool.poetry.group.torch_cuda]
+optional = true
+
+[tool.poetry.group.torch_cuda.dependencies]
+torch = { version = ">=1.6.0"}
+
 [tool.poetry.dependencies]
 python = "3.10.12"
 uvicorn = "0.23.0"
 fastapi = "0.100.0"
 fastai = "^2.7.12"
-torch = "^2.0.1"
+torch = { version = ">=1.6.0", source="torch_cpu" }
 
 [tool.poetry.group.dev.dependencies]
 pytest = "7.4.0"

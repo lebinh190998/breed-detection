@@ -15,18 +15,19 @@ RUN apt-get update && apt-get install -y \
     zlib1g-dev \
     libpng-dev
 
+# Install Poetry
+RUN pip install poetry==1.5.1
+
 # Set the working directory in the container
 WORKDIR /app
 
 COPY . .
 
-# Install Poetry
-RUN pip install poetry==1.5.1
-
 # Install project dependencies
 RUN poetry lock && \
     poetry config virtualenvs.create false && \
-    poetry install --no-interaction --no-ansi
+    poetry install --no-interaction --no-ansi --sync --without torch_cuda && \
+    poetry install --sync --with torch_cpu
 
 RUN poetry add python-multipart
 
