@@ -24,11 +24,6 @@ WORKDIR /app
 COPY . .
 
 # Install project dependencies
-RUN poetry lock && \
-    poetry config virtualenvs.create false && \
-    poetry install --no-interaction --no-ansi
+RUN /app/scripts/build.sh
 
-RUN poetry add python-multipart
-
-RUN chmod +x /app/scripts/entry_point.sh
 ENTRYPOINT ["poetry", "run", "bash", "-c", "/app/scripts/entry_point.sh"]
