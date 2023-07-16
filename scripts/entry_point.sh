@@ -1,4 +1,4 @@
 #!/bin/bash
 set -euxo pipefail
 
-python run.py
+uvicorn breed_detection.asgi:app --host 0.0.0.0 --port 8000 --reload
