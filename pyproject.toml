@@ -12,10 +12,10 @@ uvicorn = "0.23.0"
 fastapi = "0.100.0"
 fastai = "^2.7.11"
 torch = [
-    {url = "https://download.pytorch.org/whl/cpu/torch-1.9.0-cp39-cp39-manylinux2014_aarch64.whl", platform = "linux", python = ">=3.9 <3.10"}
+    {url = "https://download.pytorch.org/whl/cpu/torch-1.13.1%2Bcpu-cp39-cp39-linux_x86_64.whl", platform = "linux", python = ">=3.9 <3.10"}
 ]
 torchvision = [
-    {url = "https://download.pytorch.org/whl/cpu/torchvision-0.10.0-cp39-cp39-manylinux2014_aarch64.whl", platform = "linux", python = ">=3.9 <3.10"}
+    {url = "https://download.pytorch.org/whl/cpu/torchvision-0.14.1%2Bcpu-cp39-cp39-linux_x86_64.whl", platform = "linux", python = ">=3.9 <3.10"}
 ]
 
 [tool.poetry.group.dev.dependencies]
