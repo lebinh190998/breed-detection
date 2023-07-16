@@ -3,8 +3,7 @@ set -euxo pipefail
 
 
 if [ "$RUN_ENV" = "production" ]; then
-  python3 -m pip install --no-cache-dir torch==1.13.1+cpu -f "https://download.pytorch.org/whl/cpu/torch_stable.html"
-  python3 -m pip install --no-cache-dir torchvision==0.14.1+cpu -f "https://download.pytorch.org/whl/cpu/torch_stable.html"
+    pip install torch==1.13.1+cpu torchvision==0.14.1+cpu --extra-index-url https://download.pytorch.org/whl/cpu
 fi
 
 poetry lock
