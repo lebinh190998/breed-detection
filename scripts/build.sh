@@ -10,4 +10,4 @@ if [ "$RUN_ENV" = "production" ]; then
 fi
 
 poetry install --no-interaction --no-ansi
-poetry add python-multipart
+poetry add python-multipart --no-interaction --no-ansi
