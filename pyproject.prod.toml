@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "breed-detection"
+version = "0.1.0"
+description = ""
+authors = ["Binh Le <lebinh190998@gmail.com>"]
+readme = "README.md"
+packages = [{include = "breed_detection"}]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+uvicorn = "0.23.0"
+fastapi = "0.100.0"
+fastai = "^2.7.11"
+torch = { url = "https://download.pytorch.org/whl/cpu/torch-1.13.1%2Bcpu-cp39-cp39-linux_x86_64.whl", platform = "linux", python = ">=3.9 <3.10"}
+torchvision = {url = "https://download.pytorch.org/whl/cpu/torchvision-0.14.1%2Bcpu-cp39-cp39-linux_x86_64.whl", platform = "linux", python = ">=3.9 <3.10"}
+
+[tool.poetry.group.dev.dependencies]
+pytest = "7.4.0"
+
+[build-system]
+requires = ["poetry=1.5.1"]
+build-backend = "poetry.core.masonry.api"
