@@ -23,7 +23,10 @@ WORKDIR /app
 
 COPY . .
 
+
 # Install project dependencies
+RUN chmod +x /app/scripts/build.sh
 RUN /app/scripts/build.sh
 
+RUN chmod +x /app/scripts/entry_point.sh
 ENTRYPOINT ["poetry", "run", "bash", "-c", "/app/scripts/entry_point.sh"]
