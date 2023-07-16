@@ -1,5 +1,5 @@
 # Use the official Python image as the base image
-FROM python:3.10.12 as base
+FROM python:3.9 as base
 
 # Install additional dependencies
 RUN apt-get update && apt-get install -y \
@@ -26,8 +26,7 @@ COPY . .
 # Install project dependencies
 RUN poetry lock && \
     poetry config virtualenvs.create false && \
-    poetry install --no-interaction --no-ansi --sync --without torch_cuda && \
-    poetry install --sync --with torch_cpu
+    poetry install --no-interaction --no-ansi
 
 RUN poetry add python-multipart
 
