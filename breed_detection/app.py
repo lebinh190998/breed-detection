@@ -11,7 +11,7 @@ CURRENT_DIR = os.path.dirname(os.path.realpath(__file__))
 def app_init() -> FastAPI:
     app = FastAPI()
     
-    origins = ["http://localhost:3000", "http://localhost:3002"]
+    origins = ["https://visionpaws.vercel.app", "http://localhost:3000", "http://localhost:3002"]
 
     app.add_middleware(
         CORSMiddleware,
