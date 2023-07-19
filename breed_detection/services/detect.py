@@ -7,10 +7,12 @@ experiment_directory = os.path.join(base_path, 'experiment')
 pkl_file_path = os.path.join(experiment_directory, 'breed_identifier_model.pkl')
 
 async def predict(image) -> str:
+
     # Load the .pkl file
-    learn = load_learner(pkl_file_path)
+    learn = load_learner(pkl_file_path, cpu=True)
     
     im = Image.open(image.file)
     im.thumbnail((192,192))
     (pred, idx, probs) = learn.predict(im)
+
     return pred
