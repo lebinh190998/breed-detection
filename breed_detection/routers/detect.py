@@ -12,6 +12,7 @@ router = APIRouter(
 @router.post("/")
 async def detect_breed(image: UploadFile):
     try:
+        print("---- BEFORE ENDPOINT ----")
         breed = await predict(image)
         return JSONResponse(content={"breed": breed})
     
