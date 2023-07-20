@@ -9,8 +9,7 @@ def label_breed(x):
 
 # Construct the absolute file path
 base_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-experiment_directory = os.path.join(base_path, 'experiment')
-pkl_file_path = os.path.join(experiment_directory, 'breed_identifier_model.pkl')
+pkl_file_path = os.path.join(base_path, 'breed_identifier_model.pkl')
 
 print("---- LOADING LEANER ----")
 learn = load_learner(pkl_file_path, cpu=True)

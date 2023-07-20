@@ -9,6 +9,10 @@ router = APIRouter(
     responses={404: {"description": "Not found"}},
 )
 
+@router.get("/")
+async def get_breed():
+    return JSONResponse(content={"breed": "YES"})
+
 @router.post("/")
 async def detect_breed(image: UploadFile):
     try:
