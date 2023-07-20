@@ -14,6 +14,6 @@ async def predict(image) -> str:
     im = Image.open(image.file)
     im.thumbnail((192,192))
     print("---- PREDICTING ----")
-    (pred, idx, probs) = learn.predict(im)
+    # (pred, idx, probs) = learn.predict(im)
 
-    return pred
+    return "Breed"
