@@ -5,15 +5,15 @@ import os
 base_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 experiment_directory = os.path.join(base_path, 'experiment')
 pkl_file_path = os.path.join(experiment_directory, 'breed_identifier_model.pkl')
+print("---- LOADING LEANER ----")
+learn = load_learner(pkl_file_path, cpu=True)
 
 async def predict(image) -> str:
-    print("---- LOADING LEANER ----")
     # Load the .pkl file
-    learn = load_learner(pkl_file_path, cpu=True)
     print("---- OPENING IMAGE ----")
     im = Image.open(image.file)
     im.thumbnail((192,192))
     print("---- PREDICTING ----")
-    # (pred, idx, probs) = learn.predict(im)
+    (pred, idx, probs) = learn.predict(im)
 
-    return "Breed"
+    return pred
