@@ -2,7 +2,7 @@
 FROM python:3.9 as base
 
 # Set the default value for RUN_ENV if not provided
-ARG RUN_ENV=production
+ARG RUN_ENV=development
 
 # Install additional dependencies
 RUN apt-get update && apt-get install -y \
