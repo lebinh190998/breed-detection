@@ -17,8 +17,12 @@ async def get_breed():
 async def detect_breed(image: UploadFile):
     try:
         print("---- BEFORE ENDPOINT ----")
-        breed = await predict(image)
-        return JSONResponse(content={"breed": breed})
+        is_cat = await predict(image)
+        if is_cat == True:
+            return JSONResponse(content={"breed": "Cat"})
+        else:
+            return JSONResponse(content={"breed": "Dog"})
+            
     
     except FileNotFoundError:
         return JSONResponse(content={"error": "Pkl file not found"}, status_code=404)
