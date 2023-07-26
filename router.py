@@ -18,7 +18,7 @@ async def detect_breed(image: UploadFile):
     try:
         print("---- BEFORE ENDPOINT ----")
         is_cat = await predict(image)
-        if is_cat == True:
+        if bool(is_cat) == True:
             return JSONResponse(content={"breed": "Cat"})
         else:
             return JSONResponse(content={"breed": "Dog"})
