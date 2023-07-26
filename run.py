@@ -5,7 +5,6 @@ Usage:
 """
 import os
 import uvicorn
-from fastai.vision.all import *
 
 CURRENT_DIR = os.path.dirname(os.path.realpath(__file__))
 
