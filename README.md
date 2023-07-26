@@ -3,7 +3,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-    <img src="static/favicon/android-icon-192x192.png" alt="Logo" width="80" height="80">
+    <img src="static/icon.png" alt="Logo" width="80" height="80">
   <h3 align="center">VisionPaws</h3>
 
   <p align="center">
@@ -54,7 +54,7 @@
 ## About The Project
 
 <a href="https://visionpaws.vercel.app/">
-    <img align="center" src="static/favicon/cover.png" alt="Cover Image" width="800" height="400">
+    <img align="center" src="static/cover.png" alt="Cover Image" width="800" height="400">
 </a>
 
 <p align="right">(<a href="#top">back to top</a>)</p>
