@@ -4,7 +4,7 @@ version = "0.1.0"
 description = ""
 authors = ["Binh Le <lebinh190998@gmail.com>"]
 readme = "README.md"
-packages = [{include = "breed_detection"}]
+packages = []
 
 [tool.poetry.dependencies]
 python = "^3.9"
@@ -12,7 +12,6 @@ uvicorn = "0.23.0"
 fastapi = "0.100.0"
 fastai = "^2.7.11"
 python-multipart = "^0.0.6"
-gunicorn = "^21.2.0"
 
 [tool.poetry.group.dev.dependencies]
 pytest = "7.4.0"
