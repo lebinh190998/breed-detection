@@ -15,4 +15,5 @@ async def predict(image) -> str:
     print("---- PREDICTING ----")
     (pred, idx, probs) = learn.predict(im)
 
-    return pred
+    my_bool = False if pred == "False" else bool(pred)
+    return my_bool
