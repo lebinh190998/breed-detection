@@ -1,6 +1,5 @@
 <div id="top"></div>
 
-<!-- PROJECT LOGO -->
 <br />
 <div align="center">
   <h3 align="center">VisionPaws</h3>
