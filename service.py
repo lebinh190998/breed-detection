@@ -1,10 +1,11 @@
 from fastai.vision.all import *
-from run import learn
 import os
 
+
 # Construct the absolute file path
-base_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+base_path = os.path.dirname(os.path.abspath(__file__))
 pkl_file_path = os.path.join(base_path, 'breed_identifier_model.pkl')
+learn = load_learner(pkl_file_path, cpu=True)
 
 async def predict(image) -> str:
     # Load the .pkl file
