@@ -4,9 +4,7 @@ Usage:
 - Generate openapi docs: python run.py openapi
 """
 import os
-import sys
 import uvicorn
-import yaml
 from fastai.vision.all import *
 
 CURRENT_DIR = os.path.dirname(os.path.realpath(__file__))
