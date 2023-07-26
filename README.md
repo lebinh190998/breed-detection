@@ -3,7 +3,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-    <img src="static/icon.png" alt="Logo" width="80" height="80">
+    <img src="static/icon.svg" alt="Logo" width="80" height="80">
   <h3 align="center">VisionPaws</h3>
 
   <p align="center">
